@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 class Dec2Hex
 {
+    //Change to see if docker is set up to automatically build correctly
 
     public static int Arg1;
 
