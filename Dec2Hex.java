@@ -5,7 +5,7 @@ class Dec2Hex
     //Change to see if docker is set up to automatically build correctly
 
     public static int Arg1;
-
+    
     public static void main(String args[])
     {
 	if (args.length > 0)
@@ -27,10 +27,15 @@ class Dec2Hex
 		System.err.println("you must enter an integer argument");
 		System.exit(0);
 	}
+        System.out.println("Hexadecimal representation is : " + toHex(Arg1));
 
-    	char ch[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
-         int rem, num;
-	num = Arg1;
+    }
+    
+    public static String toHex(Integer argument)
+    {
+        char ch[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+       int rem, num;
+	num = argument;
 	String hexadecimal=""; 
         System.out.println("Converting the Decimal Value " + num + " to Hex...");
         
@@ -40,8 +45,6 @@ class Dec2Hex
 	    hexadecimal= ch[rem] + hexadecimal;
             num= num/16;
         }
-        
-        System.out.println("Hexadecimal representation is : " + hexadecimal);
-
+        return hexadecimal;
     }
 }
